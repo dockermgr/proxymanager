@@ -411,7 +411,7 @@ CONTAINER_PROTOCOL="http"
 CONTAINER_DNS=""
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Setup nginx proxy variables - [yes/no] [yes/no] [http] [https] [yes/no] [ip_address]
-HOST_NGINX_ENABLED="yes"
+HOST_NGINX_ENABLED="no"
 HOST_NGINX_SSL_ENABLED="yes"
 HOST_NGINX_HTTP_PORT="80"
 HOST_NGINX_HTTPS_PORT="443"
@@ -425,7 +425,7 @@ HOST_NGINX_LISTEN_ON_IP_ADDRESS=""
 HOST_NGINX_VHOST_CONFIG_NAME=""
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Enable this if container is running a webserver - [yes/no] [internalPort] [yes/no] [yes/no] [listen]
-CONTAINER_WEB_SERVER_ENABLED="yes"
+CONTAINER_WEB_SERVER_ENABLED="no"
 CONTAINER_WEB_SERVER_INT_PORT="81"
 CONTAINER_WEB_SERVER_SSL_ENABLED="no"
 CONTAINER_WEB_SERVER_AUTH_ENABLED="no"
@@ -445,7 +445,7 @@ CONTAINER_WEB_SERVER_VHOSTS=""
 CONTAINER_ADD_RANDOM_PORTS=""
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Add custom port -  [exter:inter] or [.all:exter:inter/[tcp,udp] [listen:exter:inter/[tcp,udp]] random:[inter]
-CONTAINER_ADD_CUSTOM_PORT=""
+CONTAINER_ADD_CUSTOM_PORT="80:80/tcp,443:443/tcp,81:81/tcp"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Create a single port mapping [listen]:[externalPort/random]:[internalPort]
 CONTAINER_ADD_CUSTOM_SINGLE=""
