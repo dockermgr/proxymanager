@@ -224,6 +224,11 @@ __hash_password() { __cmd_exists htpasswd && htpasswd -bnBC 10 "" "$1" | tr -d '
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Define any pre-install scripts
 __run_pre_install() {
+  local service
+  for service in apache2 caddy httpd nginx; do
+    systemctl disable --now $service >/dev/null 2>&1
+    systemctl mask $service >/dev/null 2>&1
+  done
 
   return 0
 }
