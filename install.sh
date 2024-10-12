@@ -247,7 +247,8 @@ run_post_install() {
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Define any post-install scripts
 run_post_custom() {
-
+  __printf_spacing_color 128 "As soon as you are done configuring nginx you should edit"
+  __printf_spacing_color 128 "$DOCKERMGR_INSTALL_SCRIPT and set -p 81:81 to 127.0.0.1:81:81"
   return 0
 }
 #
